@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('master', function () {
+    return view('master.app');
+});
+
+route::get('bimbleonline','BimbleController@index');
+
+Route::get('/hapus/destroy/{id}','BimbleController@destroy');
