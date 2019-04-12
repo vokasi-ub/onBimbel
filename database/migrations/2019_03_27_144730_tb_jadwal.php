@@ -15,11 +15,8 @@ class TbJadwal extends Migration
     {
         Schema::create('tb_jadwal', function(Blueprint $kolom){
             $kolom->increments('idJadwal'); //primary key
-            $kolom->date('Hari');
-            $kolom->time('Jam'); 
-            $kolom->integer('id_Siswa'); 
-            $kolom->integer('id_Ruang');
-            $kolom->integer('id_Mapel');
+            $kolom->string('Hari');
+            $kolom->string('Jam'); 
         });
     }
 

@@ -19,6 +19,46 @@ Route::get('master', function () {
     return view('master.app');
 });
 
-route::get('bimbleonline','BimbleController@index');
+Route::get('/siswa/cari','BimbleController@cari');
 
-Route::get('/hapus/destroy/{id}','BimbleController@destroy');
+//----- Siswa -----
+
+route::get('/datasiswa/index','BimbleController@index');
+
+Route::get('/datasiswa/siswa','BimbleController@tambah');
+
+Route::post('/tambahsiswa/tambah','BimbleController@tambahsiswa');
+
+Route::get('/bimblesiswa/edit/{idSiswa}','BimbleController@edit');
+
+Route::post('/datasiswa/update','BimbleController@update');
+
+Route::get('/hapus/destroy/{idSiswa}','BimbleController@destroy');
+
+//----- Jadwal -----
+
+Route::get('/jadwal/index','jadwalController@jadwal');
+
+Route::get('/jadwal/goadd','jadwalController@tambah');
+
+Route::post('/jadwal/tambah','jadwalController@tambahjadwal');
+
+Route::get('/jadwal/destroy/{idJadwal}','jadwalController@destroy');
+
+//----- Mapel -----
+
+Route::get('/mapel/index','MapelController@mapel');
+
+Route::get('/mapel/goadd','MapelController@tambah');
+
+Route::post('/mapel/tambah','MapelController@tambahmapel');
+
+Route::get('/mapel/destroy/{idMapel}','MapelController@destroy');
+
+//----- Login -----
+
+Route::get('bimbleonline', 'LoginController@login');
+Route::post('/loginPost', 'LoginController@loginPost');
+Route::get('/register', 'LoginController@register');
+Route::post('/registerPost', 'LoginController@registerPost');
+Route::get('/logout', 'LoginController@logout');

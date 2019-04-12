@@ -16,7 +16,6 @@ class TbSiswa extends Migration
         Schema::create('tb_siswa', function(Blueprint $kolom){
             $kolom->increments('idSiswa'); //primary key
             $kolom->string('namaSiswa', 100);
-            $kolom->text('Foto');
             $kolom->text('Alamat');
             $kolom->string('noTelf', 25);
             $kolom->string('kelas', 25);
